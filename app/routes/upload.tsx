@@ -6,6 +6,7 @@ import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2image";
 import {generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "~/constants";
+import {extractPdfText} from "~/lib/pdfToText";
 
 const Upload = () => {
     const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -51,10 +52,19 @@ const Upload = () => {
         console.log("uploadedImage:", uploadedImage);
         console.log("uploadedImage.path:", uploadedImage.path);
 
-        const feedback = await ai.feedback(
-            uploadedFile.path,
-            prepareInstructions({ jobTitle, jobDescription })
-        )
+        const resumeText = await extractPdfText(file);
+
+        const feedback = await ai.chat(
+            `
+Resume:
+
+${resumeText}
+
+${prepareInstructions({
+                jobTitle,
+                jobDescription
+            })}
+`);
         if (!feedback) return setStatusText('Error: Failed to analyze resume');
 
         const feedbackText = typeof feedback.message.content === 'string'
