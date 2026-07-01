@@ -60,6 +60,9 @@ Resumind is an AI-powered resume analysis platform that helps job seekers improv
 
 ### Resume Analysis
 
+<img width="1920" height="898" alt="Screenshot (1851)" src="https://github.com/user-attachments/assets/1e8bb97b-e700-49ea-9b6f-6bd789186c96" />
+
+<img width="1920" height="900" alt="Screenshot (1852)" src="https://github.com/user-attachments/assets/0f674329-13a6-44d3-93b9-4d8ceef440da" />
 
 
 ---
