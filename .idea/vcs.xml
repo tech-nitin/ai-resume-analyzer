@@ -2,10 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public/Documents/GitHub/GDG" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public/Documents/GitHub/project_3D_developer_portfolio" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public/Documents/GitHub/react-beginner-blog" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public/Documents/GitHub/todo-app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/public/Documents/GitHub/weather-app" vcs="Git" />
   </component>
 </project>
